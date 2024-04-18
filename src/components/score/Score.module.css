@@ -1,10 +1,17 @@
 .score {
   display: flex;
-  gap: 30px;
-  margin-top: 10px;
+  gap: 40px;
+  margin-top: 20px;
 }
 
 .scoreContent {
   display: flex;
   gap: 10px;
+}
+
+@media screen and (max-width: 425px) {
+  .score {
+    flex-direction: column;
+    gap: 10px;
+  }
 }

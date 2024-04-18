@@ -1,0 +1,12 @@
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #31363F;
+    width: 100%;
+}
+
+.link {
+    color: #EABE6C;
+    font-weight: bold;
+    text-decoration: none;
+}
