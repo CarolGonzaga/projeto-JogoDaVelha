@@ -3,17 +3,15 @@ import styles from './GameInfo.module.css'
 import Icon from "../icon/Icon"
 import Button from '../button/Button'
 
-function GameInfo({ currentPlayer, winner, onReset }) {
+function GameInfo({ currentPlayer, winner, onReset, draw }) {
   
-  const shouldEnableButton = () => {
-    if (winner !== 0) return true 
-  }
+  const shouldEnableButton = () => winner !== 0 || draw
   
   return (
     <div className={styles.gameInfo}>
 
       {
-        winner === 0 &&
+        !draw && winner === 0 &&
         <>
           <h4>Jogador Atual:</h4>
           {
@@ -26,7 +24,7 @@ function GameInfo({ currentPlayer, winner, onReset }) {
       }
 
       {
-        winner !== 0 &&
+        !draw && winner !== 0 &&
         <>
           <h4>Fim de Jogo! Vencedor:</h4>
           {
@@ -36,6 +34,9 @@ function GameInfo({ currentPlayer, winner, onReset }) {
             winner === -1 && <Icon iconName={"cross"} />
           }
         </>
+      }
+      {
+        draw && <h4 className={styles.empateTitle}>Empatou!</h4>
       }
       <Button onClick={onReset} disabled={!shouldEnableButton()}>
         Reiniciar

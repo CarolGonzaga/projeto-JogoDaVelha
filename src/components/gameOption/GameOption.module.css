@@ -13,3 +13,7 @@
 .winner {
     border: 2px solid #EABE6C;
 }
+
+.draw {
+    border: 2px solid #31363F;
+}
