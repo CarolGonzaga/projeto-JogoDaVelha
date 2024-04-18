@@ -1,0 +1,10 @@
+.score {
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.scoreContent {
+  display: flex;
+  gap: 10px;
+}

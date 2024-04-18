@@ -3,6 +3,7 @@ import styles from './Game.module.css'
 
 import GameOption from '../gameOption/GameOption'
 import GameInfo from '../gameInfo/GameInfo'
+import Score from '../score/Score'
 
 //Gabarito de vitórias
 const winnerTable = [
@@ -62,7 +63,7 @@ function Game() {
         }
     }
 
-    const verifyWinnerLine = (pos) => 
+    const verifyWinnerLine = (pos) =>
         winnerLine.find((value) => value === pos) !== undefined
 
     useEffect(() => {
@@ -77,27 +78,30 @@ function Game() {
     }, [winner])
 
     return (
-        <div className={styles.gameContent}>
-            <div className={styles.game}>
-                {
-                    gameState.map((value, pos) =>
-                        <GameOption
-                            key={`game-option-pos-${pos}`}
-                            status={value}
-                            onClick={() => handleClick(pos)}
-                            isWinner={verifyWinnerLine(pos)}
-                            isDraw={draw}
-                        />
-                    )
-                }
+        <>
+            <div className={styles.gameContent}>
+                <div className={styles.game}>
+                    {
+                        gameState.map((value, pos) =>
+                            <GameOption
+                                key={`game-option-pos-${pos}`}
+                                status={value}
+                                onClick={() => handleClick(pos)}
+                                isWinner={verifyWinnerLine(pos)}
+                                isDraw={draw}
+                            />
+                        )
+                    }
+                </div>
+                <GameInfo
+                    currentPlayer={currentPlayer}
+                    winner={winner}
+                    onReset={handleReset}
+                    draw={draw}
+                />
             </div>
-            <GameInfo
-                currentPlayer={currentPlayer}
-                winner={winner}
-                onReset={handleReset}
-                draw={draw}
-            />
-        </div>
+            <Score />
+        </>
     )
 }
 
