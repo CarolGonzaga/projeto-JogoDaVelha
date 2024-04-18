@@ -2,15 +2,14 @@
   padding: 10px 30px;
   border-radius: 5px;
   cursor: pointer;
-  border: 2px solid #EEEEEE;
-  background-color: #31363F;
-  color: #EEEEEE;
+  border: none;
+  background-color: #EABE6C;
+  color: #000;
   font-weight: bold;
 }
 
 .button:disabled {
   cursor: default;
-  border: none;
   background-color: #31363F;
   color: #222831;
 }

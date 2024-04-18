@@ -9,3 +9,7 @@
     align-items: center;
     justify-content: center;
 }
+
+.winner {
+    border: 2px solid #EABE6C;
+}
