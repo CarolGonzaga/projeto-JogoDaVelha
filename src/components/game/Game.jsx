@@ -48,11 +48,13 @@ function Game() {
                 setWinner(sum / 3)
                 setWinnerLine(line)
                 setWinsCircle(winsCircle + 1)
+                setCurrentPlayer(1)
 
             } else if (sum === -3) {
                 setWinner(sum / 3)
                 setWinnerLine(line)
                 setWinsCross(winsCross + 1)
+                setCurrentPlayer(-1)
             }
         })
     }
