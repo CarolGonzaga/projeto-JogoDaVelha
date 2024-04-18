@@ -6,7 +6,7 @@
 
 .gameContent {
     display: flex;
-    gap: 30px;
+    gap: 80px;
     align-items: center;
     margin-bottom: 30px;
 }
@@ -14,7 +14,7 @@
 .gameInfo {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
     align-items: center;
 }
 
@@ -25,7 +25,7 @@
     margin-bottom: 35px;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 520px) {
     .gameContent {
         flex-direction: column;
     }
