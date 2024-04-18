@@ -1,21 +1,24 @@
-import GameOption from '../gameOption/GameOption'
 import styles from './Game.module.css'
+
+import { useState } from 'react'
+import GameOption from '../gameOption/GameOption'
 
 function Game() {
 
+    const [gameState, setGameState] = useState(Array(9).fill(0))
+
     return (
         <div className={styles.game}>
-            <GameOption />
-            <GameOption />
-            <GameOption />
-            
-            <GameOption />
-            <GameOption />
-            <GameOption />
-            
-            <GameOption />
-            <GameOption />
-            <GameOption />
+
+            {
+                gameState.map((value, pos) =>
+                    <GameOption 
+                        key={`game-option-pos-${pos}`}
+                        status={value}
+                    />
+                )
+            }
+
         </div>
     )
 }
