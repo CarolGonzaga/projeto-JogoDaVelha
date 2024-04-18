@@ -27,7 +27,9 @@
 ![React.js](https://img.shields.io/badge/React.js-%2361DAFB.svg?style=flat&logo=react&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E)
 ![CSS Modules](https://img.shields.io/badge/CSS_Modules-%231572B6.svg?style=flat&logo=css3&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-%23000000.svg?style=flat&logo=next.js&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-%23000000.svg?style=flat&logo=vercel&logoColor=white)
+
 
 <br/>
 
