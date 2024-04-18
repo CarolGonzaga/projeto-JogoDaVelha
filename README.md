@@ -1,5 +1,4 @@
 # Projeto - Jogo da Velha (Tic-Tac-Toe)
-
 - Projeto 15 - Desenvolvimento Front-End com React.js
 - Aplicação Web do Clássico Jogo da Velha
 
